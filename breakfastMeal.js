@@ -1,18 +1,20 @@
 const assert = require ('assert');
 var meal = function(breakfast){
   switch (breakfast){
-    case 'Eggs and Bacon':
-        console.log('Eggs and Bacon')
-        return 'i want to eat Eggs and Bacon as my breakfast meal';
+    case 'I want to eat Eggs and Bacon as my breakfast meal':
+        console.log('I want to eat Eggs and Bacon as my breakfast meal')
+        return 'Eggs and Bacon';
 
-    case 'Oats':
-        console.log('Oats')
-          return 'i am not a fan of Oats';
+    case 'I am not a fan of Oats':
+        console.log('I am not a fan of Oats')
+          return 'Oats';
 
   default:
-        return 'I dont want to eat anything for breakfast';
+  console.log()
+        console.log('I have nothing to eat for breakfast')
+       return 'I have nothing to eat for breakfast';
   }
 };
-assert.equal(meal('Eggs and Bacon'), 'i want to eat Eggs and Bacon as my breakfast meal' );
-assert.equal(meal('Oats'), 'i am not a fan of Oats' );
-assert.equal(meal(''), 'I dont want to eat anything for breakfast' );
+assert.equal(meal('I want to eat Eggs and Bacon as my breakfast meal'),'Eggs and Bacon');
+assert.equal(meal('I am not a fan of Oats'), 'Oats' );
+assert.equal(meal(),'I have nothing to eat for breakfast' );
