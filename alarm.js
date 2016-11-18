@@ -1,9 +1,9 @@
 const assert = require('assert');
-var alarm = function(Time){
-  switch (Time){
-      case 'alarmRing':
-      console.log('alarmRing')
-        return '5:00AM';
+var alarm = function(setAlarm){
+  switch (setAlarm){
+      case '5:00AM':
+      console.log('5:00AM')
+        return 'alarmRing';
 
       case 'Snooze alarm':
       console.log('Snooze alarm')
@@ -13,5 +13,5 @@ var alarm = function(Time){
       return 'alarm is off!';
   }
 }
-assert.equal(alarm('alarmRing'),'5:00AM');
+assert.equal(alarm('5:00AM'),'alarmRing');
 assert.equal(alarm('Snooze alarm'),'5:10AM')
